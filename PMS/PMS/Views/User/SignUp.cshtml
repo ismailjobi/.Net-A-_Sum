@@ -1,0 +1,33 @@
+﻿<h2>SignUp</h2>
+
+<form action=" " method="post">
+    
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <label for="Uname" class="control-label col-md-2">UserName</label>
+            <div class="col-md-10">
+                <input type="text" id="Uname" name="Uname" value="@(Model != null && Model.Uname != null ? Model.Uname : "")" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessage("Uname")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Pass" class="control-label col-md-2">Password</label>
+            <div class="col-md-10">
+                <input type="password" id="Pass" name="Pass" value="@(Model != null && Model.Pass != null ? Model.Pass : "")" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessage("Pass")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="/Home/Index">Back to List</a>
+</div>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+<h2>Index</h2>
+@if (TempData["Msg"] != null)
+{
+    <span class="text-danger">@TempData["Msg"]</span>
+}
+<hr />
+<a href="/Admin/Category" class="btn btn-primary">Category</a>
+<a href="/Product/Index" class="btn btn-primary">Product</a>
+<a href="/Order/Index" class="btn btn-primary">Order</a>
+<a href="/Admin/Role" class="btn btn-primary">Role</a>
+
+

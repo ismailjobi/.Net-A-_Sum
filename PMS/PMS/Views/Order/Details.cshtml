@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PMS.DTOs.OrderProductDTO>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+
+        </tr>
+    }
+    @if (Session["user"] != null && Model.First().Order.Status.Equals("Ordered"))
+    {
+        if (((PMS.EF.User)Session["user"]).Type.Type1.Equals("Admin"))
+        {
+            <tr>
+                <td><a href="/admin/decline/@Model.First().OId" class="btn btn-danger">Decline</a></td>
+                <td><a href="/admin/accept/@Model.First().OId" class="btn btn-success">Accept</a></td>
+            </tr>
+
+        }
+        else if(((PMS.EF.User)Session["user"]).Type.Type1.Equals("Customer"))
+        {
+            <tr>
+                <td><a href="/Customer/CancelOrder/@Model.First().OId" class="btn btn-danger">Cancel</a></td>
+            </tr>
+        }
+    }
+
+
+</table>

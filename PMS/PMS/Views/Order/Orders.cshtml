@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PMS.DTOs.OrderDTO>
+
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+@if (TempData["Msg"] != null) { 
+    <span class="alert-primary">@TempData["Msg"]</span>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OderDate)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="/Order/Details/@item.Id">@item.Id</a>
+           
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OderDate)
+        </td>
+        
+        @if(item.Status.Equals("Ordered"))
+        {
+                <td>
+                    <a href="/Customer/CancelOrder/@item.Id" class="btn btn-danger">Cancel</a>
+                </td>
+        }
+        
+    </tr>
+}
+
+</table>

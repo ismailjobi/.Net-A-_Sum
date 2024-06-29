@@ -1,0 +1,41 @@
+﻿@model PMS.DTOs.UserDTO
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+<h2>Profile</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            UserName
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uname)
+        </dd>
+
+        <dt>
+            User Type
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type.Type1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @if (Model.Type.Type1.Equals("Customer"))
+    {
+        @Html.ActionLink("Back to List", "Index", "Customer")
+    }
+    else if (Model.Type.Type1.Equals("Admin"))
+    {
+        @Html.ActionLink("Back to List", "Index","Admin")
+    }
+
+</p>

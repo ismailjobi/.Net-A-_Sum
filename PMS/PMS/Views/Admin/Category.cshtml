@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PMS.DTOs.CategoryDTO>
+
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+@if (TempData["Msg"] != null)
+{
+    <span class="text-success">@TempData["Msg"]</span>
+}
+
+<p>
+    <a href="/Admin/CreateCategory" class="btn btn-primary">New Category</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

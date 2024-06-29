@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PMS.DTOs.OrderDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+@if (TempData["Msg"] != null)
+{
+    <span class="alert-primary">@TempData["Msg"]</span>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="/Order/Details/@item.Id">@item.Id</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        @if (item.Status.Equals("Ordered")) { 
+            <td>
+                <a href="/Admin/Accept/@item.Id" class="btn btn-primary">Accept</a>
+                <a href="/Admin/Decline/@item.Id" class="btn btn-danger">Decline</a>
+            </td>
+        }
+        
+    </tr>
+}
+
+</table>
