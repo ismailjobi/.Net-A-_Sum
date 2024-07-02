@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Comments";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+<h6>@Model.Title</h6>
+<span class="form-text">Posted On: @Model.PostCreated</span>
+
+@if (Model.Comments.Count > 0)
+{
+    <h5>Comments</h5>
+    <ul>
+        @foreach (var item in Model.Comments)
+        {
+           <p>@item.User.Name  @item.CContent</p> 
+        }
+    </ul>
+
+}
+else
+{
+    <h5>No Comments</h5>
+}
+<form action="" method="post">
+
+    <div class="form-horizontal">
+        <input type="hidden" value="@Model.Id" />
+
+        @if (TempData["Msg"] != null)
+        {
+            <span class="text-danger">@TempData["Msg"]</span>
+        }
+        <hr />
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="text" id="CContent" name="CContent" value="  " class="form-control" placeholder="Comment"/>
+                <span class="text-danger">@Html.ValidationMessage("CContent")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Comment" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+

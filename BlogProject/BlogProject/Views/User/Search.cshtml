@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <hr />
+        <td>
+
+        <tr>
+            <h6>@item.User.Name</h6>
+        </tr>
+        <tr>
+            <span class="text-black">@item.PostCreated</span>
+        </tr>
+        <br />
+        <tr>
+            @Html.DisplayFor(modelItem => item.Title)
+        </tr>
+        @foreach (var tag in item.PostTags)
+        {
+            <span class="text-primary">@tag.Tag.TagName </span>
+        }
+
+        <br />
+        <tr>
+            @Html.DisplayFor(modelItem => item.PostBody)
+        </tr>
+        <br />
+        <tr>
+            @{ var lcount = BlogProject.Controllers.PostController.LikeCount(item.Id);
+                var dcount = BlogProject.Controllers.PostController.DisLikeCount(item.Id); }
+            @lcount
+            <a href="/Post/Like/@item.Id">Like</a>|
+            @dcount
+            <a href="/Post/DisLike/@item.Id">DisLike</a> |
+            <a href="/Post/Comments/@item.Id">Comment</a>
+
+        </tr>
+        </td>
+
+    }
+
+</table>
+

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BlogProject.DTOs.PostDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+
+<p>
+    <a href="/Post/Create" class="btn btn-primary">Create Post</a>
+</p>
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <hr />
+        <td>
+
+        <tr>
+            <h6>@item.User.Name</h6>
+        </tr>
+        <tr>
+            @Html.DisplayFor(modelItem => item.Title)
+        </tr>
+        @foreach (var tag in item.PostTags)
+        {
+            <span class="text-primary">@tag.Tag.TagName </span>
+        }
+
+        <br />
+        <tr>
+            @Html.DisplayFor(modelItem => item.PostBody)
+        </tr>
+        <br />
+        <tr>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+
+        </tr>
+        </td>
+    }
+
+</table>

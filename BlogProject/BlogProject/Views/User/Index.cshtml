@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BlogProject.DTOs.PostDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_InnerLayout.cshtml";
+}
+
+@if (TempData["Msg"] != null)
+{
+    <span class="alert-success">@TempData["Msg"]</span>
+}
+
+<h2>Index</h2>
+<a href="/Post/Index" class="btn btn-primary">Post</a>
+<br />
+<div class="row">
+    <form method="post" action="/User/Search">
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="Search" placeholder="Type Title" />
+        </div>
+        <div class="col-md-4">
+            <input type="submit" value="Search" class="btn btn-success" />
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h3>Recent Posts</h3>
+        <div class="list-group">
+            @foreach (var data in ViewBag.redata)
+            {
+                <a href="/User/Details/@data.Id" class="list-group-item list-group-item-action">
+                    <span>@data.User.Name - @data.Title</span>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="col-md-9">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Posts</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="post">
+                                <h6>@item.User.Name</h6>
+                                <span class="text-black">@item.PostCreated</span>
+                                <br />
+                                <div>@Html.DisplayFor(modelItem => item.Title)</div>
+                                @foreach (var tag in item.PostTags)
+                                {
+                                    <span class="text-primary">@tag.Tag.TagName </span>
+                                }
+                                
+                                <div>@Html.DisplayFor(modelItem => item.PostBody)</div>
+                                
+                                <div>
+                                    @{
+                                        var lcount = BlogProject.Controllers.PostController.LikeCount(item.Id);
+                                        var dcount = BlogProject.Controllers.PostController.DisLikeCount(item.Id);
+                                    }
+                                    <span>@lcount <a href="/Post/Like/@item.Id">Like</a> |</span>
+                                    <span>@dcount <a href="/Post/DisLike/@item.Id">DisLike</a> |</span>
+                                    <a href="/Post/Comments/@item.Id">Comment</a>
+                                </div>
+                            </div>
+                            <hr />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
