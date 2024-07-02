@@ -1,4 +1,5 @@
-﻿using BlogProject.DTOs;
+﻿using BlogProject.Auth;
+using BlogProject.DTOs;
 using BlogProject.EF;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,18 @@ using System.Web.Mvc;
 
 namespace BlogProject.Controllers
 {
+    [UserAccess]
     public class LoginController : Controller
     {
         DemoTaskEntities1 db = new DemoTaskEntities1 ();
         // GET: Login
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Index(LoginDTO LoginData)
         {

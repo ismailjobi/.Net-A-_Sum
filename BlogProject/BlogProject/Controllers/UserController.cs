@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BlogProject.Auth;
 using BlogProject.DTOs;
 using BlogProject.EF;
 using System;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace BlogProject.Controllers
 {
+    [UserAccess]
     public class UserController : Controller
     {
         DemoTaskEntities1 db = new DemoTaskEntities1();
@@ -34,11 +36,13 @@ namespace BlogProject.Controllers
 
             return View(data);
         }
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult SignUp()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult SignUp(RegistrationDTO UserData)
         {

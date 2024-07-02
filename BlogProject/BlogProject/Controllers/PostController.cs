@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BlogProject.Auth;
 using BlogProject.DTOs;
 using BlogProject.EF;
 using System;
@@ -11,6 +12,7 @@ using System.Web.Mvc;
 
 namespace BlogProject.Controllers
 {
+    [UserAccess]
     public class PostController : Controller
     {
         DemoTaskEntities1 db = new DemoTaskEntities1();
