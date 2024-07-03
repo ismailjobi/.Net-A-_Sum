@@ -1,0 +1,51 @@
+﻿@model Pactice.DTOs.UserDTO
+
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SignUp</h2>
+
+<form method="post">
+    <input type="text" id="FirstName" name="FirstName" value="@(Model != null && Model.FirstName != null ? Model.FirstName : "")" placeholder="Enter First Name." class="form-control" />
+    <span class="alert-danger">@Html.ValidationMessage("FirstName")</span>
+
+    <input type="text" id="LastName" name="LastName" value="@(Model != null && Model.LastName != null ? Model.LastName : "")" placeholder="Enter Last Name." class="form-control" />
+    <span class="alert-danger">@Html.ValidationMessage("LastName")</span><br />
+    Gender:<br />
+    <select class="form-control" name="Gender">
+        <option disabled @(string.IsNullOrEmpty(Model?.Department) ? "selected" : "")>Select Your Gender</option>
+        <option value="Male" @(Model?.Department == "Male" ? "selected" : "")>Male</option>
+        <option value="Female" @(Model?.Department == "Female" ? "selected" : "")>Female</option>
+    </select>
+    <br />
+    <span class="alert-danger">@Html.ValidationMessage("Gender")</span>
+
+    <input type="text" id="UserId" name="UserId" value="@(Model != null && Model.UserId != null ? Model.UserId : "")" placeholder="Enter Student ID." class="form-control" />
+    <span class="alert-danger">@Html.ValidationMessage("UserId")</span>
+
+    <input type="text" id="Email" name="Email" value="@(Model != null && Model.Email != null ? Model.Email : "")" placeholder="Enter Email." class="form-control" />
+    <span class="alert-danger">@Html.ValidationMessage("Email")</span>
+
+    <input type="password" id="Password" name="Password" value="@(Model != null && Model.Password != null ? Model.Password : "")" placeholder="Enter Your Password." class="form-control" />
+    <span class="alert-danger">@Html.ValidationMessage("Password")</span>
+    <br />
+
+    Department:
+    <select class="form-control" name="Department">
+        <option disabled @(string.IsNullOrEmpty(Model?.Department) ? "selected" : "")>Select Your Department</option>
+        <option value="CSE" @(Model?.Department == "CSE" ? "selected" : "")>CSE</option>
+        <option value="EEE" @(Model?.Department == "EEE" ? "selected" : "")>EEE</option>
+        <option value="IPE" @(Model?.Department == "IPE" ? "selected" : "")>IPE</option>
+    </select>
+    <span class="alert-danger">@Html.ValidationMessage("Department")</span>
+    <br />
+
+    <input type="submit" value="Create" class="btn btn-primary" />
+</form>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
