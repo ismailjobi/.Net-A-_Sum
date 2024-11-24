@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.NET\\JobApplicationTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|d:\\asp.net\\jobapplicationtracker\\jobapplicationtracker\\controllers\\remindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|solutionrelative:jobapplicationtracker\\controllers\\remindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|D:\\ASP.NET\\JobApplicationTracker\\jobapplicationtracker\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|solutionrelative:jobapplicationtracker\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|D:\\ASP.NET\\JobApplicationTracker\\jobapplicationtracker\\auth\\logged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|solutionrelative:jobapplicationtracker\\auth\\logged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|D:\\ASP.NET\\JobApplicationTracker\\jobapplicationtracker\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|solutionrelative:jobapplicationtracker\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA22543-B9B5-4CF9-A377-DC9671F60B79}|DAL\\DAL.csproj|D:\\ASP.NET\\JobApplicationTracker\\dal\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA22543-B9B5-4CF9-A377-DC9671F60B79}|DAL\\DAL.csproj|solutionrelative:dal\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|D:\\ASP.NET\\JobApplicationTracker\\jobapplicationtracker\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DD0335-4745-4B3D-8E55-D0037D24597E}|JobApplicationTracker\\JobApplicationTracker.csproj|solutionrelative:jobapplicationtracker\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA22543-B9B5-4CF9-A377-DC9671F60B79}|DAL\\DAL.csproj|D:\\ASP.NET\\JobApplicationTracker\\dal\\ef\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA22543-B9B5-4CF9-A377-DC9671F60B79}|DAL\\DAL.csproj|solutionrelative:dal\\ef\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\ApplicationController.cs",
+              "RelativeDocumentMoniker": "JobApplicationTracker\\Controllers\\ApplicationController.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\ApplicationController.cs",
+              "RelativeToolTip": "JobApplicationTracker\\Controllers\\ApplicationController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T03:13:18.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReminderController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\ReminderController.cs",
+              "RelativeDocumentMoniker": "JobApplicationTracker\\Controllers\\ReminderController.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\ReminderController.cs",
+              "RelativeToolTip": "JobApplicationTracker\\Controllers\\ReminderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T03:13:15.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NoteController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\NoteController.cs",
+              "RelativeDocumentMoniker": "JobApplicationTracker\\Controllers\\NoteController.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\NoteController.cs",
+              "RelativeToolTip": "JobApplicationTracker\\Controllers\\NoteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T03:13:13.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Logged.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Auth\\Logged.cs",
+              "RelativeDocumentMoniker": "JobApplicationTracker\\Auth\\Logged.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Auth\\Logged.cs",
+              "RelativeToolTip": "JobApplicationTracker\\Auth\\Logged.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T13:53:52.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Context.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\DAL\\EF\\Context.cs",
+              "RelativeDocumentMoniker": "DAL\\EF\\Context.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\DAL\\EF\\Context.cs",
+              "RelativeToolTip": "DAL\\EF\\Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T13:40:19.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "JobApplicationTracker\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\JobApplicationTracker\\Controllers\\UserController.cs",
+              "RelativeToolTip": "JobApplicationTracker\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T13:28:02.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\JobApplicationTracker\\DAL\\DataAccess.cs",
+              "RelativeDocumentMoniker": "DAL\\DataAccess.cs",
+              "ToolTip": "D:\\ASP.NET\\JobApplicationTracker\\DAL\\DataAccess.cs",
+              "RelativeToolTip": "DAL\\DataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T03:35:40.565Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

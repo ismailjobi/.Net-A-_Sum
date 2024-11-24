@@ -1,0 +1,14 @@
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\BLL.dll
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\BLL.pdb
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\DAL.dll
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\DAL.pdb
+D:\ASP.NET\JobApplicationTracker\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\ASP.NET\JobApplicationTracker\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\ASP.NET\JobApplicationTracker\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\ASP.NET\JobApplicationTracker\BLL\obj\Debug\BLL.dll
+D:\ASP.NET\JobApplicationTracker\BLL\obj\Debug\BLL.pdb
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\AutoMapper.dll
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\EntityFramework.dll
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\DAL.dll.config
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\AutoMapper.xml
+D:\ASP.NET\JobApplicationTracker\BLL\bin\Debug\EntityFramework.xml
